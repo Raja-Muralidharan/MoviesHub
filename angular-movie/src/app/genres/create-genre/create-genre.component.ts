@@ -1,5 +1,9 @@
+import { genreCreationDTO } from './../genres.model';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormField } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-create-genre',
@@ -8,12 +12,12 @@ import { Router } from '@angular/router';
 })
 export class CreateGenreComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  saveChanges(){
+  saveChanges(genreCreationDTO: genreCreationDTO){
+    console.log(genreCreationDTO);
     this.router.navigate(['/genres']);
   }
 }

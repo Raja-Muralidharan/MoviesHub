@@ -1,3 +1,4 @@
+import { MovieFilterComponent } from './movies/movie-filter/movie-filter.component';
 import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
 import { EditMovieTheatreComponent } from './movie-theatres/edit-movie-theatre/edit-movie-theatre.component';
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
@@ -9,7 +10,7 @@ import { IndexActorsComponent } from './actors/index-actors/index-actors.compone
 import { CreateGenreComponent } from './genres/create-genre/create-genre.component';
 import { IndexGenresComponent } from 'src/app/genres/index-genres/index-genres.component';
 import { HomeComponent } from './home/home.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'movietheatres/edit/:id', component: EditMovieTheatreComponent},
   {path: 'movies/create', component:CreateMovieComponent},
   {path: 'movies/edit/:id', component: EditMovieComponent},
+  {path: 'movies/filter', component: MovieFilterComponent},  
   {path: '**', redirectTo: ''}
 ];
 

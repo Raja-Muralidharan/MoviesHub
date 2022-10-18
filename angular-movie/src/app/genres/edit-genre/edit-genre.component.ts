@@ -1,3 +1,4 @@
+import { genreCreationDTO } from './../genres.model';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,10 +11,16 @@ export class EditGenreComponent implements OnInit {
 
   constructor(private ActivatedRoute: ActivatedRoute) { }
 
+ model: genreCreationDTO = {name: 'Drama'}
+
   ngOnInit(): void {
     this.ActivatedRoute.params.subscribe(params => {
       //alert(params['id']);
     });
   }
 
+  saveChanges(genreCreationDTO: genreCreationDTO)
+  {
+
+  }
 }

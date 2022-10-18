@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import{ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { GenericListComponent } from './utilities/generic-list/generic-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { MatInputModule } from '@angular/material/input';
 import { MenuComponent } from './menu/menu.component';
 import { RatingComponent } from './utilities/rating/rating.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +22,9 @@ import { EditActorsComponent } from './actors/edit-actors/edit-actors.component'
 import { EditGenreComponent } from './genres/edit-genre/edit-genre.component';
 import { EditMovieTheatreComponent } from './movie-theatres/edit-movie-theatre/edit-movie-theatre.component';
 import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
+import { FormGenreComponent } from './genres/form-genre/form-genre.component';
+import { MovieFilterComponent } from './movies/movie-filter/movie-filter.component';
+
 
 @NgModule({
   declarations: [
@@ -40,13 +44,17 @@ import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
     EditActorsComponent,
     EditGenreComponent,
     EditMovieTheatreComponent,
-    EditMovieComponent
+    EditMovieComponent,
+    FormGenreComponent,
+    MovieFilterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
